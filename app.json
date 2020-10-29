@@ -21,6 +21,8 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "description": "A market place to sell the things you don't want anymore.",
+    "githubUrl": "https://github.com/samueltrahan/react-native-dwi"
   }
 }
