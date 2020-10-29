@@ -1,23 +1,30 @@
 import { StatusBar } from "expo-status-bar";
 import React from "react";
-import { StyleSheet, Text, TouchableHighlight, View, Image, Button } from "react-native";
+import {
+  StyleSheet,
+  Text,
+  TouchableNativeFeedback,
+  View,
+  Image,
+  Alert,
+  Button,
+  Dimensions,
+} from "react-native";
+import {
+  useDemensions,
+  useDeviceOrientation,
+} from "@react-native-community/hooks";
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Hello React Native</Text>
-      <TouchableHighlight onPress={() => console.log('Image tapped')}>
-      <Image
-        fadeDuration={1000}
-        source={{
-          width: 200,
-          height: 300,
-          uri: "https://picsum.photos/seed/picsum/200/300",
+      <View
+        style={{
+          backgroundColor: "dodgerblue",
+          width: "100%",
+          height: "30%",
         }}
-      />
-      </TouchableHighlight>
-      <Button title={"Sumbit"} />
-      <StatusBar style="auto" />
+      ></View>
     </View>
   );
 }
@@ -25,7 +32,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "white",
+    backgroundColor: "dodgerblue",
     alignItems: "center",
     justifyContent: "center",
   },
